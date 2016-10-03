@@ -1,0 +1,42 @@
+.arrow{
+	position: absolute;
+	bottom: auto;
+	right: auto;
+	background-color: transparent;
+}
+.arrow::after{
+	content: " ";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
+}
+.arrow::before{
+	content: " ";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;		
+}
+.arrow.right::before {
+	transform-origin: right bottom;
+		transform: rotate(60deg);
+}
+.arrow.right::after {
+	transform-origin: right top;
+		transform: rotate(-60deg);
+}
+.arrow.left::before {
+	transform-origin: left bottom;
+		transform: rotate(-60deg);
+}
+.arrow.left::after {
+	transform-origin: left top;
+		transform: rotate(60deg);
+}
+.arrow:hover::before{
+	background-color: red;
+}
+.arrow:hover::after{
+	background-color: red;
+}
